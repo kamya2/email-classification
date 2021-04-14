@@ -1,6 +1,8 @@
 from flask import Flask
 from email_class import *
 import csv23
+import os
+
 app = Flask(__name__)
 @app.route('/')
 def predict():
@@ -12,7 +14,8 @@ def func2(message):
 
     string =  type
     return string
+port = int(os.environ.get('PORT', 5000))
+app.run(host='0.0.0.0', port=port, debug=True)
 
-app.run(host="0.0.0.0", debug=True)
 
 # string = "http://127.0.0.1:4000/" + message
