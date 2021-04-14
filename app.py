@@ -13,6 +13,6 @@ def func2(message):
     string =  type
     return string
 
-app.run(port=4000, debug=True)
+app.run(host="0.0.0.0", debug=True)
 
 # string = "http://127.0.0.1:4000/" + message
