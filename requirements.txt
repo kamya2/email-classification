@@ -15,4 +15,5 @@ scipy==1.6.2
 six==1.15.0
 sklearn==0.0
 threadpoolctl==2.1.0
+waitress==2.0.0
 Werkzeug==1.0.1
