@@ -1,9 +1,17 @@
 from flask import Flask
 from email_class import *
+from flask_cors import CORS
 import csv23
 import os
 
 app = Flask(__name__)
+CORS(app)
+cors=CORS(app,resources={
+	'r"/*"':{
+	"origins":"*"
+	}
+	})
+
 @app.route('/')
 def predict():
     return "Demo page"
